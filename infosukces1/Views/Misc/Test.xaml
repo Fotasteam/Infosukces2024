@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="infosukces1.Views.Misc.Test"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:infosukces1.Views.Misc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource LayerOnMicaBaseAltFillColorDefault}">
+        <StackPanel VerticalAlignment="Center" MinWidth="920"
+                    HorizontalAlignment="Center" Spacing="10">
+            <StackPanel 
+                Margin="100,100,100,100"
+                Spacing="70">
+                <StackPanel Spacing="10" HorizontalAlignment="Center">
+                    <TextBlock x:Name="TextBlockQuestionName" Text="Pytanie X" FontSize="25"/>
+                    <TextBlock x:Name="TextBlockQuestionDescription" Text="Tresc Pytania" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Spacing="10" Margin="10,0,0,0">
+                    <CheckBox x:Name="CheckBoxA" Content="A" Click="CheckBoxA_Click"/>
+                    <CheckBox x:Name="CheckBoxB" Content="B" Click="CheckBoxB_Click"/>
+                    <CheckBox x:Name="CheckBoxC" Content="C" Click="CheckBoxC_Click"/>
+                    <CheckBox x:Name="CheckBoxD" Content="D" Click="CheckBoxD_Click"/>
+                </StackPanel>
+                <Grid>
+                    <Button x:Name="ButtonCheck" Width="50" Height="50" Click="ButtonCheck_Click">
+                        <FontIcon Glyph="&#xEE92;"/> 
+                    </Button>
+                    <InfoBar x:Name="InfoBarBottom"
+                        Severity="Informational"
+                        Title=""
+                        Message="Kliknij przycisk po lewej, by sprawdzić poprawność odpowiedzi."
+                        IsClosable="False"
+                        Margin="55,0,55,0"
+                        Height="50"/>
+                    <Button x:Name="ButtonSend" Width="50" Height="50" IsEnabled="False" HorizontalAlignment="Right" Click="ButtonSend_Click">
+                        <FontIcon Glyph="&#xE724;"/>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="infosukces1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:infosukces1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="Base"/>
+    </Window.SystemBackdrop>
+
+    <Grid x:Name="MainGridBackground" Background="Transparent">
+        <Grid x:Name="AppTitleBar" Grid.Column="1" VerticalAlignment="Top" Canvas.ZIndex="1" Height="40">
+            <TextBlock x:Name="AppTitle" Text="Wirtualna Rzeczywistość" VerticalAlignment="Center" Margin="60,0,0,0" />
+        </Grid>
+
+        <Grid>
+            <NavigationView x:Name="NavViewMain"
+                    SelectionChanged="NavViewMain_SelectionChanged"
+                    PaneTitle="Menu"
+                    Background="Transparent"
+                    IsTitleBarAutoPaddingEnabled="True"
+                    Canvas.ZIndex="0"
+                    IsBackButtonVisible="Collapsed" 
+                    IsSettingsVisible="False"
+                    Margin="0,40,0,0">
+                <Frame x:Name="contentFrame" Margin="0,00,0,0" CornerRadius="8" Background="Transparent"/>
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Icon="Home" Content="Strona Główna" x:Name="NavItemDefault" Tag="MainPage" SelectsOnInvoked="True"/>
+                    <NavigationViewItemHeader Content="Informacje"/>
+                    <NavigationViewItem Content="Zagrożenia" SelectsOnInvoked="False">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE7BA;"/>
+                        </NavigationViewItem.Icon>
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem Content="Uzależnienia" Tag="INFORMACJEZagrozenia.Uzaleznienia"/>
+                            <NavigationViewItem Content="Prywatność" Tag="INFORMACJEZagrozenia.Prywatnosc"/>
+                            <NavigationViewItem Content="Zaburzenia Percepcji Czasu" Tag="INFORMACJEZagrozenia.Rzeczywistosc"/>
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Możliwości" SelectsOnInvoked="False">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE82F;"/>
+                        </NavigationViewItem.Icon>
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem Content="Rozrywka" Tag="INFORMACJEMozliwosci.Rozrywka"/>
+                            <NavigationViewItem Content="Praca i Edukacja" Tag="INFORMACJEMozliwosci.PracaEdukacja"/>
+                            <NavigationViewItem Content="Medycyna i Nauka" Tag="INFORMACJEMozliwosci.MedycynaNauka"/>
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+
+                    <NavigationViewItemHeader Content="Ciekawostki"/>
+                    <NavigationViewItem Content="Początki VR" Tag="CIEKAWOSTKIPoczatkiVR">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE946;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="Nieudane Projekty" Tag="CIEKAWOSTKINietypoweSprzety">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE946;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="VR kontra AR" Tag="CIEKAWOSTKIVRkontraAR">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE946;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationView.MenuItems>
+                <NavigationView.FooterMenuItems>
+                    <NavigationViewItem Icon="Page2" Content="Test z wiedzy o VR/AR" Tag="Test"/>
+                    <NavigationViewItem Content="Informacje" Tag="Info">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE946;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationView.FooterMenuItems>
+            </NavigationView>
+        </Grid>
+    </Grid>
+</Window>

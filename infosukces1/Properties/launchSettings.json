@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "infosukces1 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "infosukces1 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

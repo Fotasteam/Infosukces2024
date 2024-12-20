@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="infosukces1.Views.Informacje.Mozliwosci.Rozrywka"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:infosukces1.Views.Informacje.Mozliwosci"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:scripts="using:infosukces1.Scripts">
+
+    <ScrollViewer>
+        <StackPanel Background="{ThemeResource LayerOnMicaBaseAltFillColorDefault}"
+                    Spacing="50"
+                    Orientation="Vertical">
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,0,0">
+                <TextBlock Text="Rozrywka" FontSize="45" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock Text="Technologia często ułatwia dostęp do rozrywki, której w wirtualnej rzeczywistości jest nieograniczony wybór." TextWrapping="WrapWholeWords" FontSize="20" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Informacje" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                       TextWrapping="WrapWholeWords"
+                       HorizontalAlignment="Left">
+                            - Gry i filmy: Wirtualna rzeczywistość pozwala na zagłębienie się w fabułę poprzez eliminację zewnętrznych bodźców. Ponadto pozwala wczuć się w role głównych bohaterów. W porównaniu do tradycyjnych mediów jest to bardziej wciągające i intensywniej angażujące widza.
+                            <LineBreak/>- Podróże i wydarzenia kulturalne: Możliwość przeniesienia się do VR zapewnia tańszą alternatywę dla często drogich rozrywek. Co więcej przysparza nam nowych perspektyw.
+                            <LineBreak/>- Wirtualne awatary: Metawersum i inne podobne portale umożliwiają na nowe sposoby poznawania ludzi i spędzania z nimi czasu.
+                            <LineBreak/>- Sztuka i kultura: Dodaje nowy wymiar twórczości w przystępnej cenie. Artyści mogą zorganizować wystawy swoich dzieł online.
+
+                </TextBlock>
+            </StackPanel>
+
+            <Grid>
+                <ScrollViewer HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible">
+                    <GridView x:Name="GridViewQuestions"
+                      SelectionMode="None"
+                      Margin="10,0,10,0">
+                        <GridView.ItemContainerStyle>
+                            <Style TargetType="GridViewItem" BasedOn="{StaticResource DefaultGridViewItemStyle}">
+                                <Setter Property="Margin" Value="100,0,0,0"/>
+                            </Style>
+                        </GridView.ItemContainerStyle>
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="scripts:QuestionQuizTemplateCard">
+                                <Button CornerRadius="10"
+                            BorderThickness="1"
+                            MinHeight="300"
+                            Background="{ThemeResource ControlFillColorSecondaryBrush}"
+                            Command="{x:Bind WebsiteOpeningCommand}"
+                            CommandParameter="{x:Bind Link}"
+                            IsEnabled="{x:Bind Enabled}">
+                                    <StackPanel Spacing="10">
+                                        <TextBlock Text="{x:Bind Title}" FontSize="35"  Foreground="{ThemeResource TextFillColorPrimaryBrush}" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{x:Bind Content}" FontSize="20" Margin="10,0,0,0" TextWrapping="WrapWholeWords" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Width="450"/>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <ItemsWrapGrid Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                    </GridView>
+                </ScrollViewer>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

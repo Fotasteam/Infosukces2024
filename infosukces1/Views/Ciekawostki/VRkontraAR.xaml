@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="infosukces1.Views.Ciekawostki.VRkontraAR"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:infosukces1.Views.Ciekawostki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel Background="{ThemeResource LayerOnMicaBaseAltFillColorDefault}"
+                Spacing="50"
+                Orientation="Vertical">
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="VR kontra AR" FontSize="45" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Spacing="10">
+                    <HyperlinkButton Content="Wikipedia VR" NavigateUri="https://en.wikipedia.org/wiki/Virtual_reality" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <HyperlinkButton Content="Wikipedia AR" NavigateUri="https://en.wikipedia.org/wiki/Augmented_reality" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <HyperlinkButton Content="Meta" NavigateUri="https://forwork.meta.com/pl/blog/difference-between-vr-ar-and-mr/" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <HyperlinkButton Content="4font" NavigateUri="https://www.4font.pl/aktualnosci/roznica-miedzy-vr-a-ar/" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Podobieństwa" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                       TextWrapping="WrapWholeWords"
+                       HorizontalAlignment="Left">
+                       Urządzenia VR i AR dążą do głębokiej imersji użytkownika w cyfrowym świecie. Pozwalają na naturalne i intuicyjne interakcje z komputerem. Na polu medycznym daje to możliwość nauki praktycznej bez wykorzystania żywych pacjentów. Ponadto, obie technologie wymagają zakupu drogich urządzeń do interakcji z systemem. Kolejnym ich podobieństwem jest wykorzystanie w sektorze rozrywkowym. VR częściej wykorzystuje się do gier, a AR do oglądania filmów, ale obie wspierają te media.
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Różnice" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                       TextWrapping="WrapWholeWords"
+                       HorizontalAlignment="Left">
+                       Główną różnicę VR i AR można odnaleźć w ich nazwach, rzeczywistość wirtualna i rozszerzona. Dzieli je stopień zanurzenia w świecie cyfrowym. VR tworzy nową, fikcyjną przestrzeń, a AR rozbudowuje to, co widzimy o elementy nierzeczywiste. Następną cechą rozróżniającą te technologie jest mobilność użytkownika. VR zazwyczaj wymaga stacjonarnego stanowiska, a z AR korzysta się z reguły w ruchu. Ponadto, zastosowania obu systemów się różnią. Gogle VR nie pomogą inżynierowi w pracy w miejscu fizycznym, ale mogą mu dostarczyć wiele przydatnych informacji np. na temat działania maszyn go otaczających.
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,100">
+                <TextBlock Text="Zastosowania VR i AR w dzisiejszym świecie" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                       TextWrapping="WrapWholeWords"
+                       HorizontalAlignment="Left">
+                       W dzisiejszym świecie VR i AR najczęściej jest wykorzystywane w celach rozrywkowych, np. gry komputerowe czy oglądanie filmów lub seriali. Nie są to jednak wszystkie ich zastosowania. Rzeczywistość rozszerzona dobrze odnajduje się w biznesie, turystyce i handlu, natomiast VR lepiej sprawdza się w architekturze, dziale edukacji i grach komputerowych. Obie technologie cieszą się coraz większym zainteresowaniem ogółu społeczeństwa.
+                </TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

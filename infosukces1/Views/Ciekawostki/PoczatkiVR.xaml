@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="infosukces1.Views.Ciekawostki.PoczatkiVR"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:infosukces1.Views.Ciekawostki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel Background="{ThemeResource LayerOnMicaBaseAltFillColorDefault}"
+                    Spacing="50"
+                    Orientation="Vertical">
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Początki VR" FontSize="45" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" Spacing="10">
+                    <HyperlinkButton Content="Wikipedia" NavigateUri="https://pl.wikipedia.org/wiki/Rzeczywisto%C5%9B%C4%87_wirtualna" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <HyperlinkButton Content="CyberSkill" NavigateUri="https://www.cyberskill.pl/historia-vr/" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <HyperlinkButton Content="Newsweek" NavigateUri="https://www.newsweek.pl/historia/historia-vr-kiedy-i-dlaczego-wirtualna-rzeczywistosc-stala-sie-wazna-i-popularna/sl1y6ns" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="VR nie jest nową technologią" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Left">
+                           Idea wirtualnej rzeczywistości pojawiła się w połowie XX wieku. Jednym z pionierów tej raczkującej technologii był Morton Heilig, który w 1962 roku zaprezentował swoje urządzenie o nazwie "Sensorama". Był to wielozmysłowy symulator umożliwiający oglądanie obrazów w 3D, słuchania dźwięków i odczucia wibracji. Projekt pomimo nowatorskiego pomysłu nie cieszył się popularnością, gdyż wyprzedził swój czas.
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Kolejne kroki" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Left">
+                           Następnym pionierem tej technologii był Ivan Sutherland, który w 1968 roku stworzył "The Sword of Damacoles". Było to dość prymitywne urządzenie, ale jako pierwsze wykorzystywało wyświetlacz umieszczony na głowie użytkownika. Pokazuje to nowy trend, który w obecnych czasach stał się standardem.
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Lata dziewięćdziesiąte" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Left">
+                           W latach dziewięćdziesiątych pojawiły się pierwsze komercyjne aplikacje wirtualnej rzeczywistości. W tej dekadzie gigant konsol i gier wideo Nintendo wypuścił na świat Virtual Boy'a, pierwszą konsolę do gier VR. Urządzenie to przyczyniło się do rozwoju dzisiejszych gogli, ponieważ gdyby nie wysokie koszty i ograniczenia technologiczne Virtual Boy byłby sukcesem.
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,0">
+                <TextBlock Text="Rewolucja Oculusa" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Left">
+                           Jednym z największych, jeśli nie największym czynnikiem rozwoju tej technologi był Palmer Luckey. Jego firma Oculus rozpoczęła kampanie na kickstarterze, która pomogła im ufundować pierwsze urządzenie z wysoką jakością obrazu i precyzyjnym śledzeniem ruchu głowy. W 2014 roku firma Luckeya została przejęta przez Meta (Facebook). Od tamtego czasu znaczenie VR na rynku stale rośnie.
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,50,100">
+                <TextBlock Text="VR dziś" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+                <TextBlock FontSize="20"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Left">
+                           Dziś VR posiada wiele popularnych systemów, należą do nich urządzenia serii Oculus, HTC Vive, Valve Index czy Playstation VR. Te urządzenia posiadają niezwykle zaawansowane czujniki, sensory i wyświetlacze, dzięki czemu fikcyjny świat wydaje się bliski realnemu. Dzisiaj VR znajduje zastosowanie w grach, medycynie, rozrywce, przemyśle i tworzeniu filmów. Wirtualna rzeczywistość codziennie znajduje nowe zastosowania, więc jest to tylko kwestia czasu zanim pojawi się w nowych dziedzinach życia.
+                </TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
