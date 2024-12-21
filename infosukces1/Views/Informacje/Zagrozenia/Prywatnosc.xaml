@@ -40,42 +40,6 @@
 
                 </TextBlock>
             </StackPanel>
-
-            <Grid>
-                <ScrollViewer HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible">
-                    <GridView x:Name="GridViewQuestions"
-                      SelectionMode="None"
-                      Margin="10,0,10,0">
-                        <GridView.ItemContainerStyle>
-                            <Style TargetType="GridViewItem" BasedOn="{StaticResource DefaultGridViewItemStyle}">
-                                <Setter Property="Margin" Value="100,0,0,0"/>
-                            </Style>
-                        </GridView.ItemContainerStyle>
-                        <GridView.ItemTemplate>
-                            <DataTemplate x:DataType="scripts:QuestionQuizTemplateCard">
-                                <Button CornerRadius="10"
-                            BorderThickness="1"
-                            MinHeight="300"
-                            Background="{ThemeResource ControlFillColorSecondaryBrush}"
-                            Command="{x:Bind WebsiteOpeningCommand}"
-                            CommandParameter="{x:Bind Link}"
-                            IsEnabled="{x:Bind Enabled}">
-                                    <StackPanel Spacing="10">
-                                        <TextBlock Text="{x:Bind Title}" FontSize="35"  Foreground="{ThemeResource TextFillColorPrimaryBrush}" Margin="10,0,0,0"/>
-                                        <TextBlock Text="{x:Bind Content}" FontSize="20" Margin="10,0,0,0" TextWrapping="WrapWholeWords" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Width="450"/>
-                                    </StackPanel>
-                                </Button>
-                            </DataTemplate>
-                        </GridView.ItemTemplate>
-                        <GridView.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <ItemsWrapGrid Orientation="Horizontal"/>
-                            </ItemsPanelTemplate>
-                        </GridView.ItemsPanel>
-                    </GridView>
-                </ScrollViewer>
-            </Grid>
-
         </StackPanel>
     </ScrollViewer>
 </Page>

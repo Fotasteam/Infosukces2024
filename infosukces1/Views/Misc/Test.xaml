@@ -35,7 +35,8 @@
                         Message="Kliknij przycisk po lewej, by sprawdzić poprawność odpowiedzi."
                         IsClosable="False"
                         Margin="55,0,55,0"
-                        Height="50"/>
+                        Height="50"
+                        IsOpen="True"/>
                     <Button x:Name="ButtonSend" Width="50" Height="50" IsEnabled="False" HorizontalAlignment="Right" Click="ButtonSend_Click">
                         <FontIcon Glyph="&#xE724;"/>
                     </Button>

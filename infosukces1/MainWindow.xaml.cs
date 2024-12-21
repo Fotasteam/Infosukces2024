@@ -1,3 +1,4 @@
+using Microsoft.UI;
 using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -13,6 +14,7 @@ namespace infosukces1
         {
             this.ExtendsContentIntoTitleBar = true;
             this.SetTitleBar(AppTitleBar);
+            Title = "Wirtualna Rzeczywistoœæ";
 
             this.InitializeComponent();
 

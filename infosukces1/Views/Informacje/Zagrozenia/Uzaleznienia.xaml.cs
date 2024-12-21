@@ -23,15 +23,6 @@ namespace infosukces1.Views.Informacje.Zagrozenia
         public Uzaleznienia()
         {
             this.InitializeComponent();
-
-            List<QuestionQuizTemplateCard> questions = new List<QuestionQuizTemplateCard>()
-            {
-                new QuestionQuizTemplateCard{ Title = "Czy VR naprawdê uzale¿nia?", Content = "Istniej¹ ju¿ powa¿ne przypadki uzale¿nieñ od wirtualnej rzeczywistoœci. ", Enabled = true, Link = "https://projecteuler.net/" },
-                new QuestionQuizTemplateCard{ Title = "Przyklad bez linku", Content = "Opis przykladu bez linku", Enabled = false }
-            };
-
-            foreach (var question in questions)
-                GridViewQuestions.Items.Add(question);
         }
     }
 }
