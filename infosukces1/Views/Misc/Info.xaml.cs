@@ -18,26 +18,9 @@ namespace infosukces1.Views.Misc
 {
     public sealed partial class Info : Page
     {
-        ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         public Info()
         {
             this.InitializeComponent();
-
-            if (localSettings.Values["ToggleDataSave"] == null)
-                localSettings.Values["ToggleDataSave"] = true;
-
-            ToggleSwitchWlaczZapisDanych.IsOn = (bool)localSettings.Values["ToggleDataSave"];
-        }
-
-        private void ToggleSwitchWlaczZapisDanych_Toggled(object sender, RoutedEventArgs e)
-        {
-            localSettings.Values["ToggleDataSave"] = ToggleSwitchWlaczZapisDanych.IsOn;
-            ButtonUsunDane.IsEnabled = ToggleSwitchWlaczZapisDanych.IsOn;
-        }
-
-        private void ButtonUsunDane_Click(object sender, RoutedEventArgs e)
-        {
-            localSettings.Values["currentQuestion"] = 0;
         }
     }
 }

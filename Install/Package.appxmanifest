@@ -7,12 +7,12 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="3ed17f80-c8ec-4b5d-a617-065f34b310fc"
+    Name="e9d71456-e997-437b-8be9-298d39081263"
     Publisher="CN=Maksymilian Stawicki"
-    Version="1.0.5.0" />
+    Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>Deployer</DisplayName>
+    <DisplayName>Install</DisplayName>
     <PublisherDisplayName>Maksymilian Stawicki</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -31,15 +31,13 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Wirtualna Rzeczywistosc"
-        Description="Installer aplikacji Wirtualna Rzeczywistosc"
+        DisplayName="Install"
+        Description="Install"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png"  Square71x71Logo="Images\SmallTile.png" Square310x310Logo="Images\LargeTile.png"/>
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Images\SplashScreen.png" />
-        <uap:InitialRotationPreference>
-          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>

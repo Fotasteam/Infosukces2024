@@ -7,12 +7,12 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="3ed17f80-c8ec-4b5d-a617-065f34b310fc"
+    Name="a87843e2-2747-4a15-bc4e-0aafc4ebec7b"
     Publisher="CN=Maksymilian Stawicki"
-    Version="1.0.5.0" />
+    Version="1.0.1.0" />
 
   <Properties>
-    <DisplayName>Deployer</DisplayName>
+    <DisplayName>Installer</DisplayName>
     <PublisherDisplayName>Maksymilian Stawicki</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -31,8 +31,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Wirtualna Rzeczywistosc"
-        Description="Installer aplikacji Wirtualna Rzeczywistosc"
+        DisplayName="Zainstaluj Wirtualna Rzeczywistosc"
+        Description="Instalator programu Wirtualna Rzeczywistosc"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">

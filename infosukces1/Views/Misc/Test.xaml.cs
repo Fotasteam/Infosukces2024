@@ -8,7 +8,7 @@ namespace infosukces1.Views.Misc
 {
     public sealed partial class Test : Page
     {
-        private int currentQuestion = -1;
+        private int currentQuestion = 0;
 
         List<QuestionTemplate> questions = new List<QuestionTemplate>()
         {
@@ -25,20 +25,10 @@ namespace infosukces1.Views.Misc
             new QuestionTemplate{ QuestionDescription="Czego nie zawieraj¹ gogle VR?", QuestionAnswer=3, QuestionAnswerAContent="A. G³oœników lub s³uchawek", QuestionAnswerBContent="B. Czujników ruchu", QuestionAnswerCContent="C. Ekranu", QuestionAnswerDContent="D. Emulatorów zapachów" },
             new QuestionTemplate{ QuestionDescription="Do czego mo¿e prowadziæ nadmierne przebywanie w przestrzeni wirtualnej?", QuestionAnswer=0, QuestionAnswerAContent="A. Do izolacji spo³ecznej", QuestionAnswerBContent="B. Do poprawy relacji rodzinnych", QuestionAnswerCContent="C. Do wyleczenia skoliozy", QuestionAnswerDContent="D. Do poprawy wzroku" }
         };
-
-        ApplicationDataContainer localsettings = ApplicationData.Current.LocalSettings;
         
         public Test()
         {
             this.InitializeComponent();
-            //localsettings.Values["currentQuestion"] = 0;
-
-            if (localsettings.Values["currentQuestion"] == null)
-                localsettings.Values["currentQuestion"] = 0;
-            else
-                currentQuestion = int.Parse(localsettings.Values["currentQuestion"].ToString());
-
-            //Debug.WriteLine(localsettings.Values["currentQuestion"]);
 
             NextRound();
         }
@@ -51,7 +41,6 @@ namespace infosukces1.Views.Misc
             CheckBoxB.Content = questions[currentQuestion].QuestionAnswerBContent;
             CheckBoxC.Content = questions[currentQuestion].QuestionAnswerCContent;
             CheckBoxD.Content = questions[currentQuestion].QuestionAnswerDContent;
-            localsettings.Values["currentQuestion"] = currentQuestion;
 
             CheckBoxA.IsEnabled = true;
             CheckBoxB.IsEnabled = true;

@@ -41,27 +41,6 @@
                            <LineBreak/>Git - Backup i kopia na githuba
                 </TextBlock>
             </StackPanel>
-            <StackPanel Spacing="10" Orientation="Vertical" Margin="100,50,0,0">
-                <TextBlock Text="Zapisywanie danych" FontSize="25" Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
-                <TextBlock FontSize="20"
-                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
-                           TextWrapping="WrapWholeWords"
-                           HorizontalAlignment="Left"
-                           Margin="0,0,30,0">
-                           Włącz lub wyłącz automatyczny zapis postępów w teście wiedzy.
-                </TextBlock>
-                <StackPanel Orientation="Horizontal" Spacing="30">
-                    <ToggleSwitch x:Name="ToggleSwitchWlaczZapisDanych"
-                                  OnContent="Automatyczny Zapis Włączony"
-                                  OffContent="Automatyczny Zapis Wyłączony"
-                                  Height="40"
-                                  Toggled="ToggleSwitchWlaczZapisDanych_Toggled"/>
-                    <Button x:Name="ButtonUsunDane"
-                            Content="Usuń zapisany stan testu"
-                            Height="40"
-                            Click="ButtonUsunDane_Click"/>
-                </StackPanel>
-            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>
